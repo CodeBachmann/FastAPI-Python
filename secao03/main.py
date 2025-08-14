@@ -81,4 +81,4 @@ async def calcular(a:int = Query(gt=5), b:int = Query(gt=6), x_geek:str = Header
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, log_level="info", reload=True)
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, log_level="info", reload=True)
