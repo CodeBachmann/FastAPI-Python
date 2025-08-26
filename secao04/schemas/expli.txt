@@ -1,0 +1,1 @@
+Para cada Model é necessário criar um schema caso estiver trabalhando com APIs

@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from core.database import engine, DBBaseModel
+from core.database import engine
+from sqlmodel import SQLModel
 from core.configs import settings
 from api.v1.endpoints import curso
 from api.v1.api import api_router
