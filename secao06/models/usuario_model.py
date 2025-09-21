@@ -1,8 +1,8 @@
 # models/usuario_model.py
 from __future__ import annotations
 from typing import Optional, List
+from sqlalchemy.orm import Mapped
 from sqlmodel import Field, SQLModel, Relationship
-from models.artigo_model import ArtigoModel
 
 class UsuarioModel(SQLModel, table=True):
     __tablename__ = "usuarios"
@@ -11,4 +11,4 @@ class UsuarioModel(SQLModel, table=True):
     nome: str
     email: str
 
-    artigos: List["ArtigoModel"] = Relationship(back_populates="usuario")
+    artigos: Mapped[List["ArtigoModel"]] = Relationship(back_populates="usuario")

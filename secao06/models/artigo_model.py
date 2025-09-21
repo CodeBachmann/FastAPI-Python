@@ -10,4 +10,4 @@ class ArtigoModel(SQLModel, table=True):
     titulo: str
     url_fonte: str
     usuario_id: int = Field(foreign_key="usuarios.id")
-    usuarios: Optional[UsuarioModel] = Relationship(back_populates="artigos", lazy="joined")
+    usuarios: Optional[UsuarioModel] = Relationship(back_populates="artigos")
